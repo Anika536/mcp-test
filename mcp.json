@@ -1,0 +1,22 @@
+{
+  "mcpServers": {
+    "mcp-test-server": {
+      "command": "mcp-test-server",
+      "description": "Comprehensive MCP test server for testing MCP scanners",
+      "args": [],
+      "env": {}
+    },
+    "mcp-test-python": {
+      "command": "python",
+      "args": ["server.py"],
+      "description": "MCP test server via Python",
+      "env": {}
+    },
+    "mcp-test-uv": {
+      "command": "uvx",
+      "args": ["mcp-test-server"],
+      "description": "MCP test server via uvx",
+      "env": {}
+    }
+  }
+}

@@ -2,6 +2,16 @@
 
 A comprehensive Model Context Protocol (MCP) server designed specifically for testing MCP scanners and validating MCP implementations. This server provides a rich set of tools, resources, and prompts to exercise various aspects of the MCP specification.
 
+**🔍 Scanner Compatible:** This repository is fully configured to be detected by the [APIsec MCP Audit Scanner](https://apisec-inc.github.io/mcp-audit/).
+
+**⚡ Quick Start:** Want to test scanner detection immediately? See [QUICK_START.md](QUICK_START.md)
+
+## Scanner Detection Documentation
+
+- **[QUICK_START.md](QUICK_START.md)** - Get scanned in 10 minutes
+- **[SCANNER_GUIDE.md](SCANNER_GUIDE.md)** - Detailed detection guide
+- **[SCANNER_CHECKLIST.md](SCANNER_CHECKLIST.md)** - Verification checklist
+
 ## Features
 
 ### 🛠️ Tools
@@ -132,6 +142,20 @@ This server is ideal for testing MCP scanner tools because it provides:
 2. **Multiple Resource Types** - Different MIME types and content structures
 3. **Edge Cases** - Tools with no required parameters, optional fields, enums
 4. **Standard Compliance** - Follows MCP specification strictly
+5. **Scanner Detection** - Multiple configuration files for detection testing
+
+### Scanner Detection
+
+This repository is configured to be detected by MCP scanner tools like the [APIsec MCP Audit Scanner](https://apisec-inc.github.io/mcp-audit/).
+
+**Detection files included:**
+- `mcp.json` - Claude Desktop style configuration
+- `mcp.yaml` - YAML format configuration  
+- `.mcp/config.json` - Hidden directory config
+- `package.json` - npm dependencies with `@modelcontextprotocol/sdk`
+- `requirements.txt` - Python dependencies with `modelcontextprotocol`
+
+📖 **See [SCANNER_GUIDE.md](SCANNER_GUIDE.md)** for detailed scanner testing instructions.
 
 ### Scanner Test Checklist
 
@@ -147,14 +171,27 @@ This server is ideal for testing MCP scanner tools because it provides:
 
 ```
 mcp-test/
-├── server.py           # Main MCP server implementation
-├── pyproject.toml      # Package configuration
-├── README.md          # This file
-├── .gitignore         # Git ignore rules
-├── LICENSE            # MIT License
-└── examples/          # Example usage scripts
-    ├── test_client.py
-    └── scanner_test.py
+├── server.py              # Main MCP server implementation
+├── pyproject.toml         # Package configuration
+├── package.json           # npm metadata (for scanner detection)
+├── requirements.txt       # Python dependencies
+├── README.md             # This file
+├── SCANNER_GUIDE.md      # Scanner detection guide
+├── .gitignore            # Git ignore rules
+├── LICENSE               # MIT License
+├── mcp.json              # MCP configuration (Claude Desktop style)
+├── mcp.yaml              # MCP configuration (YAML format)
+├── mcp-config.json       # Example client configuration
+├── .mcp/                 # MCP metadata directory
+│   ├── config.json       # Scanner-detectable config
+│   └── mcp.json          # MCP metadata
+├── examples/             # Example usage scripts
+│   ├── README.md
+│   ├── test_client.py
+│   └── scanner_test.py
+└── tests/                # Unit tests
+    ├── __init__.py
+    └── test_server.py
 ```
 
 ## Requirements

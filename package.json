@@ -1,0 +1,25 @@
+{
+  "name": "mcp-test-server",
+  "version": "0.1.0",
+  "description": "Comprehensive MCP server for testing MCP scanners",
+  "main": "server.py",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "testing",
+    "scanner"
+  ],
+  "author": "MCP Testing Team",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.9.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "python examples/scanner_test.py"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/mcp-test"
+  }
+}

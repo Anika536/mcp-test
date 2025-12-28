@@ -1,0 +1,14 @@
+{
+  "name": "mcp-test-server",
+  "version": "0.1.0",
+  "description": "MCP test server metadata",
+  "type": "testing",
+  "provider": "Community",
+  "risk_level": "low",
+  "verified": true,
+  "capabilities": [
+    "tools",
+    "resources",
+    "prompts"
+  ]
+}

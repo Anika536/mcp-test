@@ -1,0 +1,17 @@
+{
+  "servers": {
+    "mcp-test-server": {
+      "command": "mcp-test-server",
+      "description": "Comprehensive MCP test server for testing MCP scanners with 6 tools, 4 resources, and 2 prompts",
+      "args": [],
+      "env": {},
+      "capabilities": {
+        "tools": true,
+        "resources": true,
+        "prompts": true
+      }
+    }
+  },
+  "version": "0.1.0",
+  "description": "MCP configuration for scanner testing"
+}

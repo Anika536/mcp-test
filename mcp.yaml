@@ -1,0 +1,25 @@
+---
+mcpServers:
+  mcp-test-server:
+    command: mcp-test-server
+    description: Comprehensive MCP test server for testing MCP scanners
+    args: []
+    env: {}
+    capabilities:
+      tools: true
+      resources: true
+      prompts: true
+
+  mcp-test-python:
+    command: python
+    args:
+      - server.py
+    description: MCP test server via Python
+    env: {}
+
+metadata:
+  version: "0.1.0"
+  name: mcp-test-server
+  description: MCP configuration for scanner testing
+  provider: Community
+  risk_level: low
