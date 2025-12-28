@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "mcp-test": {
+      "command": "mcp-test-server",
+      "description": "MCP Test Server for scanner testing"
+    }
+  }
+}

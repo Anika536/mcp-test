@@ -1,0 +1,2 @@
+# Requirements for MCP Test Server
+mcp>=0.9.0
